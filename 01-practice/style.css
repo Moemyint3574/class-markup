@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+body {
+    font-size: 16px;
+    color: #6C6C6F;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    padding: 40px 0 40px;
+    background-color: #123D88;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mainvisual {
+    padding: 160px 0;
+    background: url(./images/bg_mainvisual.png) center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.mainvisual dt {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.mainvisual dd {
+    margin: 30px 0 60px;
+}
+
+.mainvisual a {
+    padding: 20px 40px;
+    display: inline-block;
+    background-color: #F87624;
+    width: 200px;
+    border-radius: 27.5px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.3;
+    font-weight: bold;
+    color: #262934;
+}
+
+.service {
+    padding: 120px 0;
+    text-align: center;
+    background-color: #F7FAFF;
+}
+
+.service-list {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 60px;
+    justify-items: center;
+}
+
+.service-list .bank {
+    padding: 60px 110px 75px;
+    background-color: #ffffff;
+    width: 360px;
+}
+
+.bank p {
+    margin-top: 25px;
+}
+
+.payment {
+    margin: 120px 0;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 100px;
+}
+
+.features a,
+.plist a {
+    color: #ffffff;
+    margin-top: 60px;
+    display: inline-block;
+    width: 200px;
+    padding: 20px 55px;
+    background-color: #256BE6;
+    border-radius: 27.5px;
+}
+
+.features .inner {
+    padding: 120px 0;
+    background-color: #F7FAFF;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+}
+
+.featuresli {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 40px;
+    row-gap: 70px;
+}
+
+@media(690px <width) {
+    .service-list {
+        grid-template-columns: auto auto auto;
+        column-gap: 60px;
+    }
+
+    .payment {
+        align-items: center;
+        grid-template-columns: 558px 552px;
+        column-gap: 90px;
+    }
+
+    .payment .plist {
+        order: 2;
+    }
+
+    .features .inner {
+        grid-template-columns: 558px 552px;
+        column-gap: 90px;
+    }
+}
