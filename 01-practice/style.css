@@ -4,7 +4,7 @@ body {
     font-size: 16px;
     color: #6C6C6F;
     font-family: Helvetica, Arial, Helvetica, sans-serif;
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 img {
@@ -20,15 +20,31 @@ img {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
     padding: 40px 0 40px;
-    background-color: #123D88;
+    background-color: rgba(18, 61, 136, 100%);
 }
 
 h1 {
     text-align: center;
 }
 
+main a:hover {
+    color: #256BE6;
+    background-color: #262934;
+}
+
+::selection {
+    color: #256BE6;
+    background-color: #262934;
+}
+
 .mainvisual {
+    margin-top: 110px;
     padding: 160px 0;
     background: url(./images/bg_mainvisual.png) center;
     color: #ffffff;
@@ -61,6 +77,25 @@ h2 {
     color: #262934;
 }
 
+h2:before {
+    content: "";
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #256BE6;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.online-payment h2:before {
+    content: "online payment";
+}
+
+.features h2:before {
+    content: "our features"
+}
+
 .service {
     padding: 120px 0;
     text-align: center;
@@ -83,6 +118,7 @@ h2 {
 
 .bank p {
     margin-top: 25px;
+    width: 140px;
 }
 
 .payment {
@@ -103,12 +139,16 @@ h2 {
     border-radius: 27.5px;
 }
 
-.features .inner {
+.features {
     padding: 120px 0;
     background-color: #F7FAFF;
+}
+
+.features .inner {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 100px;
+    align-items: center;
 }
 
 .featuresli {
@@ -116,6 +156,27 @@ h2 {
     grid-template-columns: auto auto;
     column-gap: 40px;
     row-gap: 70px;
+}
+
+.featuresli dt {
+    margin: 40px 0 20px;
+}
+
+.bank p,
+.features-list dt {
+    font-size: 22px;
+    color: #2F2F35;
+    /* font-weight: bold; */
+}
+
+footer {
+    padding: 80px 0 50px;
+    background-color: #123D88;
+}
+
+footer p {
+    text-align: right;
+    color: #ffffff;
 }
 
 @media(690px <width) {
