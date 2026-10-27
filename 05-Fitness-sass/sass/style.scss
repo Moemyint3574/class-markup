@@ -1,0 +1,246 @@
+@use 'sass:math';
+
+$font-family-base: Helvetica,
+    Arial,
+    sans-serif;
+$font-family-micho: 'Times New Roman',
+    Times,
+    serif;
+$color-text: #9E9E9E;
+$color-bg: #292F39;
+$color-accent: #5EB6E1;
+$color-sub: #FF1D6A;
+
+@mixin inner($mw: 1200px, $w: percentage(math.div(560, 640))) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin title-main() {
+    margin-bottom: 60px;
+    font-size: 32px;
+    font-family: $font-family-micho;
+    font-weight: bold;
+    line-height: math.div(42, 32);
+}
+
+body {
+    color: $color-bg;
+    font-size: 16px;
+    font-family: $font-family-base;
+    line-height: math.div(27, 16);
+    letter-spacing: #{math.div(20,1000)}em;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: bottom;
+    }
+}
+
+.header {
+    padding: 40px 0 100px;
+
+
+    &__inner {
+        @include inner();
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        .nav__list {
+            display: flex;
+            column-gap: 30px;
+            font-size: 16px;
+            font-family: $font-family-base;
+            font-weight: bold;
+            color: $color-bg;
+            line-height: math.div(27, 16);
+
+            li:hover {
+                color: #5EB6E1;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 60px 0;
+    background-color: $color-accent;
+    text-align: center;
+
+    &__inner {
+        @include inner();
+    }
+
+    small {
+        font-size: 12px;
+        color: #fff;
+        line-height: math.div(20, 12);
+    }
+}
+
+/*module*/
+.intro {
+    &__title {
+        @include title-main();
+
+        &::after {
+            content: "";
+            display: block;
+            width: 120px;
+            margin-top: 20px;
+            border-bottom: 2px solid $color-accent;
+        }
+    }
+
+    &__content {
+        color: $color-text;
+    }
+
+    &--center {
+        text-align: center;
+
+        .intro__title {
+
+            &::after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+}
+
+.card {
+    &__content {
+        padding-top: 30px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: math.div(31, 24);
+    }
+
+    &__text {
+        color: $color-sub;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: math.div(27, 16);
+    }
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    margin-top: 60px;
+    padding: 25px;
+    background-color: $color-accent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: $color-sub;
+    }
+
+    &--red {
+        margin: 60px auto 0;
+        background-color: $color-sub;
+
+        &:hover {
+            background-color: $color-accent;
+        }
+    }
+}
+
+.panel {
+
+    &__list {
+        margin: 80px 0 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    &__pic {
+        position: relative;
+    }
+
+    &__label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 0;
+        background-color: rgba(0, 0, 0, .6);
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+        line-height: math.div(31, 24);
+    }
+}
+
+/*index.html
+-------------*/
+.welcome {
+    padding-bottom: 100px;
+
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-template-columns: 620px 500px;
+        column-gap: 80px;
+        align-items: center;
+    }
+
+}
+
+.team {
+    padding: 100px 0;
+    background-color: $color-bg;
+    color: #ffffff;
+    text-align: center;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+    }
+}
+
+/*about.html*/
+.ourclasses {
+
+    padding-bottom: 100px;
+
+    &__inner {
+        @include inner();
+    }
+}
+
+.testimonial {
+    padding: 100px 0;
+    background-color: $color-bg;
+    color: #ffffff;
+    text-align: center;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__item {
+        margin-top: 80px;
+    }
+}
