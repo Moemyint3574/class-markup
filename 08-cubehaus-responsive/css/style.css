@@ -1,3 +1,206 @@
 body {
+  color: #000000;
   font-size: 0.875rem;
+  font-family: "Helvetica Neue", Arial, "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 2.4;
+  background-color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.header {
+  padding: 3rem 0;
+}
+.header__inner {
+  max-width: 1000px;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2083333333;
+  letter-spacing: 0.1em;
+}
+
+.gnav__list {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+.gnav__list a {
+  font-size: 0.75rem;
+  line-height: 1.1666666667;
+  transition: 0.2s;
+}
+.gnav__list a:hover {
+  color: #E40065;
+}
+.gnav__active {
+  color: #E40065;
+}
+
+.footer {
+  padding: 5rem 0;
+  color: #fff;
+  background-color: #2f2f2f;
+}
+.footer__inner {
+  max-width: 1000px;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__copyright {
+  text-align: center;
+}
+.footer__copyright small {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/*utilities*/
+.u-keepall {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/*modules*/
+.intro__title {
+  display: inline-block;
+  margin-bottom: 4rem;
+  border-bottom: 2px solid #E40065;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.6875;
+  text-wrap: blance;
+}
+.intro__content {
+  display: grid;
+  row-gap: 3rem;
+}
+.intro--center {
+  text-align: center;
+}
+
+.card {
+  display: grid;
+  gap: 0.75rem;
+}
+.card__pic img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.card__title {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.7222222222;
+}
+.card__text {
+  line-height: 1.7142857143;
+}
+
+@media (width >= 700px) {
+  .hero {
+    padding: 5rem 0 8rem;
+  }
+}
+.hero__inner {
+  max-width: 1000px;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__image {
+  display: block;
+}
+.hero__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero__body {
+  padding: 5rem 0 7.75rem;
+}
+
+.works {
+  padding: 7.75rem 0;
+  background-color: #F4F4F4;
+}
+@media (width >= 700px) {
+  .works {
+    padding: 8rem 0 7.75rem;
+  }
+}
+.works__inner {
+  max-width: 1000px;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.works__list {
+  display: grid;
+  gap: 4rem;
+}
+@media (width >= 700px) {
+  .works__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 3.125rem;
+         column-gap: 3.125rem;
+  }
+}
+
+.schedule {
+  padding: 7.75rem 0;
+}
+.schedule__inner {
+  max-width: 1000px;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.schedule__scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.schedule__table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+.schedule__table th,
+.schedule__table td {
+  padding: 0.9375rem 0;
+  border: 1px solid #707070;
+  text-align: center;
+}
+.schedule__table thead {
+  background-color: #EDEFF2;
+  font-weight: bold;
+}
+.schedule__table tbody th {
+  width: 161px;
+  background-color: #EDEFF2;
+  font-weight: bold;
+}
+@media (width >= 700px) {
+  .schedule__note {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
