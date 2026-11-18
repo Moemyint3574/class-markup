@@ -4,10 +4,10 @@
 // --- Variables ---
 
 // Colors
-$color-text: #333333;
+$color-text: #244D4D;
 $color-base: #ffffff;
 $color-main: #000000;
-$color-accent: #e40065;
+$color-accent: #F4F4F4;
 $color-bg: #f8f9fa;
 
 // Typography
@@ -67,3 +67,45 @@ $breakpoints: (
     margin-left: auto;
     margin-right: auto;
 }
+
+@mixin title-main() {
+    margin-bottom: rem(25);
+    color: $color-text;
+    font-size: rem(48);
+    font-weight: bold;
+    font-family: $font-family-gothic ;
+    text-align: center;
+}
+
+body {
+    font-size: rem(16);
+    color: $color-text;
+    font-family: $font-family-gothic;
+    line-height: math.div(27, 16);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.header {
+    padding: rem(40) 0;
+
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {}
+}
+
+.gnav {}
